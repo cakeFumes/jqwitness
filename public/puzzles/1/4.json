@@ -1,0 +1,28 @@
+{
+    "title": "Arrays",
+    "message":"Arrays can be JSON objects too! Let's get the first item on list, Tuna. Remember Arrays start with index 0.",
+    "completedmessage":"",
+    "input":[
+        "Tuna",
+        "Vegetarian",
+        "Treats"
+    ],
+    "answer":".[0]",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{6,}",
+            "failmsg":"Too many characters!"
+        }
+    ]
+}

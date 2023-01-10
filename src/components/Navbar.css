@@ -1,0 +1,21 @@
+
+
+/* Inactive tab */
+
+.completedTab.nav-link.active {
+    background-color: green;
+    color: white;
+}
+.completedTab.nav-link {
+    background-color: #b4ff66;
+    color: blue;
+}
+.incompleteTab.nav-link.active {
+    background-color: gray;
+    color: white;
+}
+
+.puzzleTabs {
+    margin-right: 20px;
+    margin-left: 20px;
+}

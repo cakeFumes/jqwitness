@@ -1,3 +1,17 @@
+# How app works:
+
+Loops through each folder. Folder names and file names do not matter. I number it for my own convenience.
+
+Add a metadata text file for each folder.
+
+All JSON files would then be loaded as puzzles.
+
+# HIST
+
+npm i node@lts
+npm install react-bootstrap bootstrap
+npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

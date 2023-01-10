@@ -1,0 +1,28 @@
+{
+    "title": "Split into Arrays",
+    "message":"Put each entry into arrays of their own",
+    "completedmessage":"",
+    "input":[
+        "Tuna",
+        "Vegetarian",
+        "Treats"
+    ],
+    "answer":".[] | [.]",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{5,}",
+            "failmsg":"Too many characters! Try a one-letter solution"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "title": "Welcome!",
+    "message":"Welcome to jq! jq is a powerful JSON filtering tool. But to start, let's not filter anything.\n These intro levels just show you syntax, so the answer will be in the hint system.",
+    "completedmessage":"",
+    "input":["completely-unrelated-array"],
+    "answer":"{\"foo\":1,\"bar\":{\"a\":\"b\",\"c\":2}}",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{5,}",
+            "failmsg":"Too many characters! Try a one-letter solution"
+        }
+    ]
+}

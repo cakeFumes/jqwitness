@@ -1,0 +1,43 @@
+{
+    "title": "Selecting2",
+    "message":"Get the name AND age of dogs older than 15",
+    "completedmessage":".[] | select(.age>15) | .name,.age",
+    "input":[
+        {
+            "name": "Spot",
+            "breed": "Dalmation",
+            "age": 2,
+            "ID": 1
+        },
+        {
+            "name": "Kuro",
+            "breed": "MinPin",
+            "age": 16,
+            "ID": 2
+        },
+        {
+            "name": "Boltund",
+            "breed": "GoldenRetriever",
+            "age": 23,
+            "ID": 3
+        }
+    ],
+    "answer":".[] | select(.age>15) | .name,.age",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{5,}",
+            "failmsg":"Too many characters! Try a one-letter solution"
+        }
+    ]
+}

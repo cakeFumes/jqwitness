@@ -1,0 +1,75 @@
+{
+    "title": "youngonly",
+    "message":"Get all animals names where age older than 9 but also add their species into the list",
+    "completedmessage":"",
+    "input":{
+        "Animals": {
+            "Dogs": [
+                {
+                    "name": "Spot",
+                    "breed": "Dalmation",
+                    "age": 2,
+                    "ID": 1
+                },
+                {
+                    "name": "Kuro",
+                    "breed": "MinPin",
+                    "age": 16,
+                    "ID": 2
+                },
+                {
+                    "name": "Boltund",
+                    "breed": "GoldenRetriever",
+                    "age": 23,
+                    "ID": 3
+                }
+            ],
+            "Cats": [
+                {
+                    "name": "Kuro",
+                    "breed": "Nippon",
+                    "age": 3,
+                    "ID": 4
+                },
+                {
+                    "name": "Neopolitan",
+                    "breed": "Calico",
+                    "age": 10,
+                    "ID": 5
+                },
+                {
+                    "name": "Tutunkhamen",
+                    "breed": "Egyptian",
+                    "age": 8,
+                    "ID": 6
+                }
+            ]
+        },
+        "Feed": [
+            "Tuna",
+            "Vegetarian",
+            "Treats"
+        ],
+        "name": "Magnolia Shelter",
+        "type": "shelter",
+        "Business registration": "1X22C-0039"
+    },
+    "answer":".Animals | del(.[] | .[] | select(.age<9))",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{5,}",
+            "failmsg":"Too many characters! Try a one-letter solution"
+        }
+    ]
+}

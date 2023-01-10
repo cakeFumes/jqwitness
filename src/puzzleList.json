@@ -1,0 +1,212 @@
+[
+    {
+        "title": "1. Introduction",
+        "foldername": "1",
+        "puzzles": [
+            {
+                "title": "Welcome!",
+                "file": "1.json"
+            },
+            {
+                "title": "Choosing Objects",
+                "file": "2.json"
+            },
+            {
+                "title": "Choosing Deeper",
+                "file": "3.json"
+            },
+            {
+                "title": "Arrays",
+                "file": "4.json"
+            },
+            {
+                "title": "The Comma",
+                "file": "5.json"
+            },
+            {
+                "title": "Array's Colon",
+                "file": "6.json"
+            },
+            {
+                "title": "Choosing Even Deeper",
+                "file": "7.json"
+            }
+        ]
+    },
+    {
+        "title": "2. Multiple Objects and Pipes",
+        "foldername": "2",
+        "puzzles": [
+            {
+                "title": "Returning Multiple Objects",
+                "file": "1.json"
+            },
+            {
+                "title": "Same, but shorthand",
+                "file": "2.json"
+            },
+            {
+                "title": "Plumbing",
+                "file": "3.json"
+            },
+            {
+                "title": "Plumbing+1",
+                "file": "4.json"
+            },
+            {
+                "title": "Operation",
+                "file": "5.json"
+            },
+            {
+                "title": "Piping Operation",
+                "file": "6.json"
+            },
+            {
+                "title": "Sewage Piping",
+                "file": "7.json"
+            }
+        ]
+    },
+    {
+        "title": "3. select()",
+        "foldername": "3",
+        "puzzles": [
+            {
+                "title": "Select Syntax",
+                "file": "0.json"
+            },
+            {
+                "title": "Selecting",
+                "file": "1.json"
+            },
+            {
+                "title": "Selecting2",
+                "file": "2.json"
+            },
+            {
+                "title": "Selecting3",
+                "file": "3.json"
+            },
+            {
+                "title": "Select Deeper",
+                "file": "4.json"
+            },
+            {
+                "title": "Not",
+                "file": "5.json"
+            },
+            {
+                "title": "Very deep select",
+                "file": "6.json"
+            }
+        ]
+    },
+    {
+        "title": "4. Object Manipulation",
+        "foldername": "4",
+        "puzzles": [
+            {
+                "title": "Build Your Own Array",
+                "file": "1.json"
+            },
+            {
+                "title": "Build Your Own Object",
+                "file": "2.json"
+            },
+            {
+                "title": "Encapsulating",
+                "file": "3.json"
+            },
+            {
+                "title": "Split into Arrays",
+                "file": "4.json"
+            },
+            {
+                "title": "Split and Store",
+                "file": "5.json"
+            },
+            {
+                "title": "Names Only",
+                "file": "6.json"
+            }
+        ]
+    },
+    {
+        "title": "5. Variables",
+        "foldername": "5",
+        "puzzles": [
+            {
+                "title": "Variable naming",
+                "file": "1.json"
+            },
+            {
+                "title": "Pipes with Multiple Objects",
+                "file": "2.json"
+            },
+            {
+                "title": "Select",
+                "file": "3.json"
+            }
+        ]
+    },
+    {
+        "title": "6. Advanced Puzzles (To Sort)",
+        "foldername": "6",
+        "puzzles": [
+            {
+                "title": "1",
+                "file": "1.json"
+            },
+            {
+                "title": "2",
+                "file": "2.json"
+            },
+            {
+                "title": "3",
+                "file": "3.json"
+            },
+            {
+                "title": "4",
+                "file": "4.json"
+            },
+            {
+                "title": "5",
+                "file": "5.json"
+            },
+            {
+                "title": "6",
+                "file": "6.json"
+            }
+        ]
+    },
+    {
+        "title": "7. Key/Value Voodoo Magic",
+        "foldername": "7",
+        "puzzles": [
+            {
+                "title": "key",
+                "file": "1.json"
+            },
+            {
+                "title": "value",
+                "file": "2.json"
+            },
+            {
+                "title": "to_entries",
+                "file": "3.json"
+            },
+            {
+                "title": "Voodoo",
+                "file": "4.json"
+            },
+            {
+                "title": "Magic",
+                "file": "5.json"
+            },
+            {
+                "title": "Map",
+                "file": "6.json"
+            }
+        ]
+    }
+]

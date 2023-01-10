@@ -1,0 +1,50 @@
+{
+    "title": "Select Syntax",
+    "message":"Select entries greater than 20. Syntax: \".[] | select(.==1337)\"",
+    "completedmessage":"",
+    "input":[
+        1,
+        1337,
+        15,
+        23,
+        23,
+        5,
+        5,
+        365,
+        9,
+        360,
+        12,
+        65,
+        9001,
+        20,
+        88,
+        8,
+        8,
+        8,
+        42,
+        8,
+        11990,
+        650,
+        2950,
+        0,
+        -222
+    ],
+    "answer":".[] | select(.>20)",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{5,}",
+            "failmsg":"Too many characters! Try a one-letter solution"
+        }
+    ]
+}

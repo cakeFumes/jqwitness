@@ -1,0 +1,43 @@
+{
+    "title": "Piping Operations",
+    "message":"Behold the true power of pipes. Increment age by 1",
+    "completedmessage":"",
+    "input":[
+        {
+            "name": "Spot",
+            "breed": "Dalmation",
+            "age": 2,
+            "ID": 1
+        },
+        {
+            "name": "Kuro",
+            "breed": "MinPin",
+            "age": 16,
+            "ID": 2
+        },
+        {
+            "name": "Boltund",
+            "breed": "GoldenRetriever",
+            "age": 23,
+            "ID": 3
+        }
+    ],
+    "answer":".[] | .age=.age+1",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{5,}",
+            "failmsg":"Too many characters! Try a one-letter solution"
+        }
+    ]
+}
