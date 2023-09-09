@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import jqModule from 'http://localhost:3000/build/jq.js';
+import jqModule from './jqWasm/jq.js';
 
 var wasmModule;
 //MAIN JQ LOGIC
