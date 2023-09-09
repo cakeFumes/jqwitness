@@ -16,13 +16,14 @@ import './PuzzleView.css';
 //import * as acejs from 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js';
 import AceEditor from "react-ace";
 
+//PuzzleView includes objects of a single puzzle, such as the three boxes, input field, flavor text, etc
 function PuzzleView() {
     const { currentPuzzle, getPuzzleLink } = useContext(PuzzleContext);
     const { setProgressWrapper, getProgress } = useContext(ProgressContext);
 
     const [puzzleJSON, setPuzzleJSON] = useState([]);//Type JSON. in and out are also type JSON
-    const [outputString, setOutputString] = useState('');//Type String
-    const [targetString, setTargetString] = useState('');
+    const [outputString, setOutputString] = useState('');//Type String. Output after user JQ is ran
+    const [targetString, setTargetString] = useState('');//Type string. Goal state
     const [storedQuery, setStoredQuery] = useState('');//Latest record from saved queries.
     const [currentlyMatches, setCurrentlyMatches] = useState("CORRECT");
     /* Effects:
@@ -31,6 +32,7 @@ function PuzzleView() {
     onClick -> jqAndCheck(setOutputString)
     */
 
+    //The function to run JQ, which uses code from PuzzleInfra
     const jqAndCheck = (jqInput) => { //Note that localOutputString is used for comparison but is not the same as outputString
         var localOutputString = runJQ(puzzleJSON.input, jqInput);
         setOutputString(localOutputString);
@@ -45,6 +47,7 @@ function PuzzleView() {
         }
     }
 
+    //For constraints - makes jq input "fail" if they do not follow the fules. As of Sep 2023, this feature is rarely used.
     const passRegexCheck = (jqInput) => {
         var check = true;
         var errors = "";
@@ -59,6 +62,7 @@ function PuzzleView() {
         return check;
     }
 
+    //Whenever new puzzle is loaded (by clicking on Navbar), reinitialize PuzzleView
     useEffect(() => {
         console.log(JSON.stringify(currentPuzzle));
         getData();
@@ -78,6 +82,7 @@ function PuzzleView() {
                 setPuzzleJSON(puzzleJSON);
             })
     }
+    //Load in the new puzzle input, and generate the target output
     useEffect(() => {
         var localTargetString = runJQ(puzzleJSON.input, puzzleJSON.answer);
         setTargetString(localTargetString);
@@ -88,7 +93,8 @@ function PuzzleView() {
         jqAndCheck(localQuery);
     }, [targetString])
 
-
+    //Says whether the current query is correct or not
+    //Made redundant by <p>{getProgress(currentPuzzle).completed ? puzzleJSON.completedmessage : null}</p>
     const currentlyMatchHeader = (currentlyMatches) => {
         if(currentlyMatches) return(
             <p>CORRECT</p>
@@ -98,9 +104,9 @@ function PuzzleView() {
         )
     }
 
+    //Displays hints. Hints are barely made atm
+    //It's more complicated because I want multiple hints that users reveal one at a time
     const hintsSection = () => {
-
-
         return(
             <Accordion>
             <Accordion.Item eventKey="0">
@@ -122,12 +128,14 @@ function PuzzleView() {
         )
     }
 
+    //Run JQ when enter key is pressed
     const handleKeyPress = (target) => {
         if(target.charCode==13){
           var query = document.getElementById("query").value; jqAndCheck(query);
         } 
     }
 
+    //Render screen
     return (
         <div className="puzzleArea">
             {        

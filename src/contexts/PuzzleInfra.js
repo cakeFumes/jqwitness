@@ -18,7 +18,7 @@ const Module={
     noInitialRun: true
 }
 
-jqModule(Module)
+const moduleLoadedPromise = jqModule(Module)
     .then(
         (m) => {
             wasmModule=m;
@@ -26,13 +26,16 @@ jqModule(Module)
         }
     );
 
-function jq(jsonStr, query, options) {//TODO: Escape special chars
+async function jq(jsonStr, query, options) {//TODO: Escape special chars
     // Custom jq options.
     // Default = -M = disable colors
     if(!jsonStr || !query) return '';
     var mainOptions = ["-M"];
     if (options != null && options.length > 0)
         mainOptions = mainOptions.concat(options);
+    if (!wasmModule){
+        await moduleLoadedPromise;
+    }
     var FS = wasmModule.FS;
     // Create file from object
     FS.writeFile(FILE_DATA, JSON.stringify(jsonStr));
