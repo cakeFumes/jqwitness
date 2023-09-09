@@ -1,6 +1,6 @@
 {
-    "title": "Select Syntax",
-    "message":"Select entries greater than 20. Syntax: \".[] | select(.==1337)\"",
+    "title": "Map",
+    "message":"Multiply all values in the array by 2, but don't break up the array. Do this with map().",
     "completedmessage":"",
     "input":[
         1,
@@ -29,7 +29,7 @@
         0,
         -222
     ],
-    "answer":".[] | select(.>20)",
+    "answer":"map(.*2)",
     "hints":[
         {
             "ID":1,
@@ -40,11 +40,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

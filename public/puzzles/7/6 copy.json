@@ -1,6 +1,6 @@
 {
-    "title": "value",
-    "message":"values",
+    "title": "Map",
+    "message":"adsf",
     "completedmessage":"",
     "input":{
         "a": {
@@ -10,7 +10,7 @@
             "d": 2
         }
     },
-    "answer":"values[]",
+    "answer":"to_entries[] | .key as $key | .value | to_entries | map( {(.key) : {($key):.value} }) | add",
     "hints":[
         {
             "ID":1,

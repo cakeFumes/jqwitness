@@ -1,10 +1,9 @@
 {
-    "title": "Flip",
+    "title": "Flip2",
     "message":"adsf",
     "completedmessage":"",
-    "input":[
-        {
-            "Store":"Trader Joes",
+    "input":{
+        "Trader Joes":{
             "Items":[
                 "Apple",
                 "Banana",
@@ -24,16 +23,14 @@
                 "ePay"
             ]
         },
-        {
-            "Store":"Target",
+        "Target":{
             "Items":[
                 "Apple",
                 "Banana",
                 "Orange"
             ]
         },
-        {
-            "Store":"Tsukiji Imports",
+        "Tsukiji Imports":{
             "Items":[
                 "Fig",
                 "Imbe",
@@ -52,8 +49,7 @@
                 "ePay"
             ]
         },
-        {
-            "Store":"Costco",
+        "Costco":{
             "Items":[
                 "Apple",
                 "Banana",
@@ -87,8 +83,8 @@
                 "ePay"
             ]
         }
-    ],
-    "answer":"map(.Store as $store | {$store:del(.Store)}) | add",
+    },
+    "answer":"to_entries[] | .key as $key | .value | to_entries | map( {(.key) : {($key):.value} }) | add",
     "hints":[
         {
             "ID":1,

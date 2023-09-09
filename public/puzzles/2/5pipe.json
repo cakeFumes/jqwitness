@@ -1,7 +1,7 @@
 {
-    "title": "Selecting",
-    "message":"Select the entry where the dog's name is \"Kuro\"",
-    "completedmessage":"",
+    "title": "Pipe",
+    "message":"Get all animals names and breeds in one line. Syntax Hint: Try running `.[] | .name` and `.[0].name + \" \" + \"testword\"`",
+    "completedmessage":"\".[] | .name,.breed\" is NOT the same as \"(.[] | .name),(.[] | .breed)\"! Similarly, \".[] | .name+.breed\" is NOT the same as \"(.[] | .name)+(.[] | .breed)\"! Try them!",
     "input":[
         {
             "name": "Spot",
@@ -22,7 +22,7 @@
             "ID": 3
         }
     ],
-    "answer":".[] | select(.name==\"Kuro\")",
+    "answer":".[] | .name+\" \"+.breed",
     "hints":[
         {
             "ID":1,
@@ -33,11 +33,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

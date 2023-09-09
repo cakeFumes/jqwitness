@@ -1,7 +1,7 @@
 {
-    "title": "Not",
+    "title": "Big Select",
     "message":"Get all animals names where age older than 9",
-    "completedmessage":".Animals[] | .[] | select(.age>9) | .name",
+    "completedmessage":"",
     "input":{
         "Animals": {
             "Dogs": [
@@ -24,16 +24,11 @@
                     "ID": 3
                 }
             ],
-            "Birds": [
-                {
-                    "name": "sqwarkkk",
-                    "ID": 0
-                }
-            ],
             "Cats": [
                 {
                     "name": "Kuro",
                     "breed": "Nippon",
+                    "age": 3,
                     "ID": 4
                 },
                 {
@@ -59,7 +54,7 @@
         "type": "shelter",
         "Business registration": "1X22C-0039"
     },
-    "answer":".Animals[] | .[] | select(.age>9) | .name",
+    "answer":".Animals[][] | select(.age>9) | .name",
     "hints":[
         {
             "ID":1,
@@ -70,11 +65,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

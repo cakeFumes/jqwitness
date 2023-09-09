@@ -1,16 +1,14 @@
 {
-    "title": "value",
-    "message":"values",
+    "title": "Comma2",
+    "message":"Get name AND age",
     "completedmessage":"",
     "input":{
-        "a": {
-            "b": 1
-        },
-        "c": {
-            "d": 2
-        }
+        "name": "Spot",
+        "breed": "Dalmation",
+        "age": 2,
+        "ID": 1
     },
-    "answer":"values[]",
+    "answer":".name,.age",
     "hints":[
         {
             "ID":1,

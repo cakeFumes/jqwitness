@@ -1,7 +1,7 @@
 {
-    "title": "Piping Operations",
-    "message":"Behold the true power of pipes. Increment age by 1",
-    "completedmessage":"",
+    "title": "Selecting2",
+    "message":"What's Spot's age?",
+    "completedmessage":".[] | select(.name==\"Spot\").age",
     "input":[
         {
             "name": "Spot",
@@ -22,7 +22,7 @@
             "ID": 3
         }
     ],
-    "answer":".[] | .age=.age+1",
+    "answer":".[] | select(.name==\"Spot\").age",
     "hints":[
         {
             "ID":1,
@@ -33,11 +33,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

@@ -1,6 +1,6 @@
 {
-    "title": "Arrays",
-    "message":"Arrays can be JSON objects too",
+    "title": "Same, but shorthand",
+    "message":"\"Foods\" is an array. Can you do the same with minimal objects?",
     "completedmessage":"",
     "input":{
             "Foods":[
@@ -20,11 +20,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

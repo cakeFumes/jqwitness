@@ -1,0 +1,98 @@
+{
+    "title": "Deep Filter",
+    "message":"Cut down each objects' Cat array to only have cats that are younger than 6 years old (noninclusive)",
+    "completedmessage":"",
+    "input":[
+        {
+            "Shelter": "Magnolia Shelter",
+            "Cats": [
+                {
+                    "name": "Kuro",
+                    "breed": "Nippon",
+                    "age": 3,
+                    "ID": 4
+                },
+                {
+                    "name": "Neopolitan",
+                    "breed": "Calico",
+                    "age": 10,
+                    "ID": 5
+                },
+                {
+                    "name": "Tutunkhamen",
+                    "breed": "Egyptian",
+                    "age": 8,
+                    "ID": 6
+                }
+            ]
+        },
+        {
+            "Shelter": "Lavender Shelter",
+            "Cats": [
+                {
+                    "name": "B12",
+                    "breed": "Gato",
+                    "age": 7,
+                    "ID": 4
+                },
+                {
+                    "name": "Delcatty",
+                    "breed": "Himalayan",
+                    "age": 5,
+                    "ID": 4
+                },
+                {
+                    "name": "Biscuit",
+                    "breed": "Gato",
+                    "age": 1,
+                    "ID": 4
+                },
+                {
+                    "name": "Tofu",
+                    "breed": "Gato",
+                    "age": 3,
+                    "ID": 4
+                }
+            ]
+        },
+        {
+            "Shelter": "Mimosa Shelter",
+            "Cats": [
+                {
+                    "name": "Sheriff",
+                    "breed": "Persian",
+                    "age": 8,
+                    "ID": 4
+                },
+                {
+                    "name": "Beans",
+                    "breed": "Gato",
+                    "age": 8,
+                    "ID": 5
+                },
+                {
+                    "name": "Plop",
+                    "breed": "Calico",
+                    "age": 14,
+                    "ID": 6
+                }
+            ]
+        },
+        {
+            "Shelter": "Bus Shelter",
+            "Cats": []
+        }
+    ],
+    "answer":".[].Cats =(.[].Cats | map(select(.age>9)))",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

@@ -1,6 +1,6 @@
 {
-    "title": "Plumbing",
-    "message":"When dealing with multiple objects, Pipes become useful.",
+    "title": "MultiArrays",
+    "message":"Get all pet names",
     "completedmessage":"",
     "input":{
         "Dogs": [
@@ -44,7 +44,7 @@
             }
         ]
     },
-    "answer":".[] | .[].name",
+    "answer":".[][].name",
     "hints":[
         {
             "ID":1,
@@ -55,11 +55,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

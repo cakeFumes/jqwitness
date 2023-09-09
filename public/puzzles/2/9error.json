@@ -1,0 +1,117 @@
+{
+    "title": "Error Handling",
+    "message":"Get list of Vegetables... but Target doesn't store Items the same way the rest do!",
+    "completedmessage":"",
+    "input":[
+        {
+            "Store":"Trader Joes",
+            "Items":{
+                "Vegetables":[
+                    "Green Beans",
+                    "Hot Pepper",
+                    "Radish",
+                    "Spinach",
+                    "Tomato"
+                ],
+                "Fruits":[
+                    "Apple",
+                    "Banana",
+                    "Orange",
+                    "Fig",
+                    "Papaya",
+                    "Quince"
+                ]
+            },
+            "Payment":[
+                "Credit",
+                "ePay"
+            ]
+        },
+        {
+            "Store":"Target",
+            "Items":[
+                "Apple",
+                "Banana",
+                "Orange"
+            ],
+            "Payment":[
+                "Cash",
+                "Credit"
+            ]
+        },
+        {
+            "Store":"Tsukiji Imports",
+            "Items":{
+                "Vegetables":[
+                    "Napa"
+                ],
+                "Fruits":[
+                    "Fig",
+                    "Imbe",
+                    "Jackfruit",
+                    "Kiwi",
+                    "Lemon",
+                    "Melon",
+                    "Orange",
+                    "Ugni",
+                    "Yuzu"
+                ]
+            },
+            "Payment":[
+                "Cash"
+            ]
+        },
+        {
+            "Store":"Costco",
+            "Items":{
+                "Vegetables":[
+                    "Cucumbers",
+                    "Eggplant",
+                    "Green Beans",
+                    "Hot Pepper",
+                    "Napa",
+                    "Radish",
+                    "Spinach",
+                    "Tomato",
+                    "Ugni",
+                    "Vanilla",
+                    "Watercress",
+                    "Yuzu",
+                    "Zucchini"
+                ],
+                "Fruits":[
+                    "Apple",
+                    "Banana",
+                    "Dragonfruit",
+                    "Fig",
+                    "Imbe",
+                    "Jackfruit",
+                    "Kiwi",
+                    "Lemon",
+                    "Melon",
+                    "Orange",
+                    "Papaya",
+                    "Quince"
+                ]
+            },
+            "Payment":[
+                "Cash",
+                "Credit",
+                "ePay"
+            ]
+        }
+    ]
+    ,
+    "answer":".[].Items.Vegetables?",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

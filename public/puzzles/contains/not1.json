@@ -1,6 +1,6 @@
 {
-    "title": "Selecting2",
-    "message":"Get the name AND age of dogs older than 15",
+    "title": "Not",
+    "message":"Get all animals not named Kuro",
     "completedmessage":".[] | select(.age>15) | .name,.age",
     "input":[
         {
@@ -22,7 +22,7 @@
             "ID": 3
         }
     ],
-    "answer":".[] | select(.age>15) | .name,.age",
+    "answer":".[] | select(.name==\"Kuro\" | not)",
     "hints":[
         {
             "ID":1,
@@ -33,11 +33,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

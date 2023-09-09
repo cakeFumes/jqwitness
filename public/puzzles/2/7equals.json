@@ -1,5 +1,5 @@
 {
-    "title": "Operations",
+    "title": "Equals Sign",
     "message":"Instead of filtering, let's edit values instead. Increment 'age' by 1",
     "completedmessage":"",
     "input":{
@@ -19,11 +19,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }

@@ -1,0 +1,44 @@
+{
+    "title": "Map and Select",
+    "message":"Cut down the array to only have values greater than 20",
+    "completedmessage":"",
+    "input":[
+        1,
+        1337,
+        15,
+        23,
+        23,
+        5,
+        5,
+        365,
+        9,
+        360,
+        12,
+        65,
+        9001,
+        20,
+        88,
+        8,
+        8,
+        8,
+        42,
+        8,
+        11990,
+        650,
+        2950,
+        0,
+        -222
+    ],
+    "answer":"map(select(.>20))",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

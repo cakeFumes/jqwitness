@@ -5,31 +5,31 @@
         "puzzles": [
             {
                 "title": "Welcome!",
-                "file": "1.json"
+                "file": "1welcome.json"
             },
             {
                 "title": "Choosing Objects",
-                "file": "2.json"
+                "file": "2objects.json"
             },
             {
                 "title": "Choosing Deeper",
-                "file": "3.json"
+                "file": "3objects2.json"
             },
             {
                 "title": "Arrays",
-                "file": "4.json"
+                "file": "4arrays.json"
             },
             {
-                "title": "The Comma",
-                "file": "5.json"
+                "title": "Comma In Array",
+                "file": "5arraycomma.json"
             },
             {
                 "title": "Array's Colon",
-                "file": "6.json"
+                "file": "6colon.json"
             },
             {
                 "title": "Choosing Even Deeper",
-                "file": "7.json"
+                "file": "7objectdeep.json"
             }
         ]
     },
@@ -39,65 +39,81 @@
         "puzzles": [
             {
                 "title": "Returning Multiple Objects",
-                "file": "1.json"
+                "file": "1sqbracket.json"
             },
             {
                 "title": "Same, but shorthand",
-                "file": "2.json"
+                "file": "2arrayasvalue.json"
             },
             {
-                "title": "Plumbing",
-                "file": "3.json"
+                "title": "MultiArrays",
+                "file": "3arrayinarray.json"
             },
             {
-                "title": "Plumbing+1",
-                "file": "4.json"
+                "title": "Comma2",
+                "file": "4commageneral.json"
             },
             {
-                "title": "Operation",
-                "file": "5.json"
+                "title": "Pipe",
+                "file": "5pipe.json"
             },
             {
-                "title": "Piping Operation",
-                "file": "6.json"
+                "title": "Pipe Deeper",
+                "file": "6pipe2.json"
             },
             {
-                "title": "Sewage Piping",
-                "file": "7.json"
+                "title": "Equals Sign",
+                "file": "7equals.json"
+            },
+            {
+                "title": "Piping Operations",
+                "file": "8pipeequals.json"
+            },
+            {
+                "title": "Error Handling",
+                "file": "9error.json"
             }
         ]
     },
     {
-        "title": "3. select()",
+        "title": "3. select() and map()",
         "foldername": "3",
         "puzzles": [
             {
                 "title": "Select Syntax",
-                "file": "0.json"
+                "file": "1select.json"
             },
             {
                 "title": "Selecting",
-                "file": "1.json"
+                "file": "2select2.json"
             },
             {
                 "title": "Selecting2",
-                "file": "2.json"
+                "file": "3selectandfilter.json"
             },
             {
-                "title": "Selecting3",
-                "file": "3.json"
+                "title": "Selecting and Listing",
+                "file": "4selectthenpipe.json"
             },
             {
-                "title": "Select Deeper",
-                "file": "4.json"
+                "title": "Big Select",
+                "file": "5selectlarge.json"
             },
             {
-                "title": "Not",
-                "file": "5.json"
+                "title": "Deep Select",
+                "file": "6selectdeep.json"
             },
             {
-                "title": "Very deep select",
-                "file": "6.json"
+                "title": "Map",
+                "file": "7map.json"
+            },
+            {
+                "title": "Map and Select",
+                "file": "8mapselect.json"
+            },
+            {
+                "title": "Deep Map and Select",
+                "file": "9deepmapselect.json"
             }
         ]
     },
@@ -107,27 +123,31 @@
         "puzzles": [
             {
                 "title": "Build Your Own Array",
-                "file": "1.json"
+                "file": "1buildarray.json"
             },
             {
                 "title": "Build Your Own Object",
-                "file": "2.json"
+                "file": "2buildobject.json"
             },
             {
                 "title": "Encapsulating",
-                "file": "3.json"
+                "file": "3arrtoobj.json"
             },
             {
                 "title": "Split into Arrays",
-                "file": "4.json"
+                "file": "4arrtomultarr.json"
             },
             {
                 "title": "Split and Store",
-                "file": "5.json"
+                "file": "5arrtomultobj.json"
             },
             {
                 "title": "Names Only",
-                "file": "6.json"
+                "file": "6complexedit.json"
+            },
+            {
+                "title": "MapSelectFilter",
+                "file": "7mapselectfilter.json"
             }
         ]
     },

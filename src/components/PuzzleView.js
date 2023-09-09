@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useContext } from 'react';
-import * as Form2 from 'react-bootstrap/Form';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import Accordion from 'react-bootstrap/Accordion';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 import { PuzzleContext } from '../contexts/PuzzleContext.js';
 import { ProgressContext } from '../contexts/ProgressContext.js';
 import runJQ from '../contexts/PuzzleInfra.js'
@@ -22,7 +24,7 @@ function PuzzleView() {
     const [outputString, setOutputString] = useState('');//Type String
     const [targetString, setTargetString] = useState('');
     const [storedQuery, setStoredQuery] = useState('');//Latest record from saved queries.
-    const [currentlyMatches, setCurrentlyMatches] = useState(false);
+    const [currentlyMatches, setCurrentlyMatches] = useState("CORRECT");
     /* Effects:
     Page load -> getData (also triggered on tab switch) -> 
     {setPuzzleJSON -> runJQ(setTargetString)} -> setStoredQuery AND jqAndCheck(storedquery)
@@ -35,13 +37,28 @@ function PuzzleView() {
         var matchBool = false;
         if(targetString && localOutputString && targetString != '' && localOutputString != ''){
             if(localOutputString == targetString){
-                matchBool = true;
-                setCurrentlyMatches(true);
-            } else 
-            setCurrentlyMatches(false);
+                if(passRegexCheck(jqInput)) matchBool = true;
+            } else setCurrentlyMatches("INCORRECT");
             setProgressWrapper(currentPuzzle, jqInput, matchBool);
+        } else {
+            setCurrentlyMatches("INCORRECT");
         }
     }
+
+    const passRegexCheck = (jqInput) => {
+        var check = true;
+        var errors = "";
+        if(puzzleJSON.restrictions!==undefined) puzzleJSON.restrictions.map((restrictionItem, restrictionIndex) => {
+            var testCondition = new RegExp(restrictionItem.failcondition)
+            var thisCheck = !testCondition.test(jqInput);
+            if (thisCheck==false) errors+=restrictionItem.failmsg+"\n";
+            check &= thisCheck;
+        })
+        if(check==true) setCurrentlyMatches("CORRECT");
+        else setCurrentlyMatches("Matches but fails restrictions:\n"+errors)
+        return check;
+    }
+
     useEffect(() => {
         console.log(JSON.stringify(currentPuzzle));
         getData();
@@ -81,6 +98,36 @@ function PuzzleView() {
         )
     }
 
+    const hintsSection = () => {
+
+
+        return(
+            <Accordion>
+            <Accordion.Item eventKey="0">
+                <Accordion.Header>Click me for hints</Accordion.Header>
+                <Accordion.Body>
+                    <Tabs defaultActiveKey="" transition={false} id="noanim-tab-example" className="mb-3">
+                    { (puzzleJSON.hints===undefined) ? null : puzzleJSON.hints.map((hintItem, hintIndex) => { //Each dropdown has all puzzles of that folder
+                        return ( //Add PageContext logic
+                        <Tab eventKey={hintIndex} title={hintIndex}>
+                            {hintItem.text}
+                        </Tab>
+                        );
+                    })}
+                    {getProgress(currentPuzzle).completed ? <Tab eventKey="answer" title="Answer">{puzzleJSON.answer}</Tab> : null}
+                    </Tabs>
+                    </Accordion.Body>
+            </Accordion.Item>
+            </Accordion>
+        )
+    }
+
+    const handleKeyPress = (target) => {
+        if(target.charCode==13){
+          var query = document.getElementById("query").value; jqAndCheck(query);
+        } 
+    }
+
     return (
         <div className="puzzleArea">
             {        
@@ -103,17 +150,16 @@ function PuzzleView() {
             />*/}
             
             <p>{puzzleJSON.message}</p>
-            {currentlyMatchHeader(currentlyMatches)}
+            <p>{getProgress(currentPuzzle).completed ? puzzleJSON.completedmessage : null}</p>
+            {hintsSection()}
             <InputGroup className="mb-3">
                 <InputGroup.Text id="basic-addon1">jq Input</InputGroup.Text>
-                <Form.Control key={storedQuery} id="query" placeholder="." aria-label="query" aria-describedby="basic-addon1" defaultValue={storedQuery}/>
+                <Form.Control key={storedQuery} id="query" placeholder="." aria-label="query" aria-describedby="basic-addon1" defaultValue={storedQuery} onKeyPress={handleKeyPress}/>
                 <Button variant="secondary" id="button-addon2" onClick={() => {var query = document.getElementById("query").value; jqAndCheck(query)}}>
                     Run JQ!
                 </Button>
             </InputGroup>
-            <Form.Text id="sometext" muted>
-                hints maybe
-            </Form.Text>
+            <p>Your answer is currently: {currentlyMatches}</p>
             <Row className="mb-3">
                 <Form.Group as={Col}>
                     <Form.Label>Input JSON</Form.Label>

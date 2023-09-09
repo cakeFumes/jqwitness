@@ -1,6 +1,6 @@
 {
-    "title": "Flip",
-    "message":"adsf",
+    "title": "MultiContains",
+    "message":"Choose shops that contain \"Radish\" and \"Tomato\"",
     "completedmessage":"",
     "input":[
         {
@@ -43,6 +43,7 @@
                 "Melon",
                 "Napa",
                 "Orange",
+                "Radish",
                 "Ugni",
                 "Yuzu"
             ],
@@ -72,7 +73,6 @@
                 "Orange",
                 "Papaya",
                 "Quince",
-                "Radish",
                 "Spinach",
                 "Tomato",
                 "Ugni",
@@ -88,7 +88,7 @@
             ]
         }
     ],
-    "answer":"map(.Store as $store | {$store:del(.Store)}) | add",
+    "answer":".contains",
     "hints":[
         {
             "ID":1,

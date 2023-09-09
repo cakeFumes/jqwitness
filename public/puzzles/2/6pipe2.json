@@ -1,6 +1,6 @@
 {
-    "title": "Names Only",
-    "message":"Reduce the \"Animals\" object to only have names",
+    "title": "Pipe Deeper",
+    "message":"Get all animals IDs and their age PLUS ONE (use a pipe!)",
     "completedmessage":"",
     "input":{
         "Animals": {
@@ -54,7 +54,7 @@
         "type": "shelter",
         "Business registration": "1X22C-0039"
     },
-    "answer":". | .Animals=[.Animals[] | .[].name]",
+    "answer":".Animals[][] | .name,.age + 1",
     "hints":[
         {
             "ID":1,
@@ -65,11 +65,5 @@
             "text":"Try \".\""
         }
     ],
-    "restrictions":[
-        {
-            "display": "Use as few letters as possible",
-            "failcondition":".{5,}",
-            "failmsg":"Too many characters! Try a one-letter solution"
-        }
-    ]
+    "restrictions":[]
 }
