@@ -1,0 +1,24 @@
+{
+    "title": "Same, but shorthand",
+    "message":"\"Foods\" is an array. Can you do the same with minimal objects?",
+    "completedmessage":"",
+    "input":{
+            "Foods":[
+            "Tuna",
+            "Vegetarian",
+            "Treats"
+        ]
+    },
+    "answer":".Foods[]",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

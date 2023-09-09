@@ -1,0 +1,140 @@
+{
+    "title": "Deep Select",
+    "message":"Get all shelters with Calico cats. There are 2 objects in the output.",
+    "completedmessage":"It works here this time, but doing \".[]\" inside select functions is actually a bad idea! See \"Select Trap\" in the special chapter.",
+    "input":[
+        {
+            "Shelter": "Magnolia Shelter",
+            "Dogs": [
+                {
+                    "name": "Spot",
+                    "breed": "Dalmation",
+                    "age": 2,
+                    "ID": 1
+                },
+                {
+                    "name": "Kuro",
+                    "breed": "MinPin",
+                    "age": 16,
+                    "ID": 2
+                },
+                {
+                    "name": "Boltund",
+                    "breed": "GoldenRetriever",
+                    "age": 23,
+                    "ID": 3
+                }
+            ],
+            "Cats": [
+                {
+                    "name": "Kuro",
+                    "breed": "Nippon",
+                    "age": 3,
+                    "ID": 4
+                },
+                {
+                    "name": "Neopolitan",
+                    "breed": "Calico",
+                    "age": 10,
+                    "ID": 5
+                },
+                {
+                    "name": "Tutunkhamen",
+                    "breed": "Egyptian",
+                    "age": 8,
+                    "ID": 6
+                }
+            ]
+        },
+        {
+            "Shelter": "Lavender Shelter",
+            "Dogs": [],
+            "Cats": [
+                {
+                    "name": "B12",
+                    "breed": "Gato",
+                    "age": 7,
+                    "ID": 4
+                },
+                {
+                    "name": "Delcatty",
+                    "breed": "Himalayan",
+                    "age": 5,
+                    "ID": 4
+                },
+                {
+                    "name": "Biscuit",
+                    "breed": "Tabby",
+                    "age": 1,
+                    "ID": 4
+                },
+                {
+                    "name": "Tofu",
+                    "breed": "Gato",
+                    "age": 3,
+                    "ID": 4
+                }
+            ]
+        },
+        {
+            "Shelter": "Mimosa Shelter",
+            "Dogs": [
+                {
+                    "name": "TenThousand",
+                    "breed": "Dalmation",
+                    "age": 2,
+                    "ID": 1
+                },
+                {
+                    "name": "Woof",
+                    "breed": "Terrier",
+                    "age": 16,
+                    "ID": 2
+                },
+                {
+                    "name": "Granbull",
+                    "breed": "Bulldog",
+                    "age": 23,
+                    "ID": 3
+                }
+            ],
+            "Cats": [
+                {
+                    "name": "Sheriff",
+                    "breed": "Persian",
+                    "age": 8,
+                    "ID": 4
+                },
+                {
+                    "name": "Beans",
+                    "breed": "Gato",
+                    "age": 8,
+                    "ID": 5
+                },
+                {
+                    "name": "Plop",
+                    "breed": "Calico",
+                    "age": 14,
+                    "ID": 6
+                }
+            ]
+        },
+        {
+            "Shelter": "Bus Shelter",
+            "Dogs": [],
+            "Cats": []
+        }
+    ],
+    "answer":".[] | select(.Cats[].breed==\"Calico\")",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

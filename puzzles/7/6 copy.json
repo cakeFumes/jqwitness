@@ -1,0 +1,25 @@
+{
+    "title": "Map",
+    "message":"adsf",
+    "completedmessage":"",
+    "input":{
+        "a": {
+            "b": 1
+        },
+        "c": {
+            "d": 2
+        }
+    },
+    "answer":"to_entries[] | .key as $key | .value | to_entries | map( {(.key) : {($key):.value} }) | add",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

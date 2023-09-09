@@ -1,0 +1,44 @@
+{
+    "title": "Map",
+    "message":"Multiply all values in the array by 2, but don't break up the array. Do this with map().",
+    "completedmessage":"",
+    "input":[
+        1,
+        1337,
+        15,
+        23,
+        23,
+        5,
+        5,
+        365,
+        9,
+        360,
+        12,
+        65,
+        9001,
+        20,
+        88,
+        8,
+        8,
+        8,
+        42,
+        8,
+        11990,
+        650,
+        2950,
+        0,
+        -222
+    ],
+    "answer":"map(.*2)",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

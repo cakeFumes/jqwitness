@@ -1,0 +1,22 @@
+{
+    "title": "Split and Store",
+    "message":"Split this into 3 JSON objects, as the value of \"item\"",
+    "completedmessage":"",
+    "input":[
+        "Tuna",
+        "Vegetarian",
+        "Treats"
+    ],
+    "answer":".[] | {\"item\":.}",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

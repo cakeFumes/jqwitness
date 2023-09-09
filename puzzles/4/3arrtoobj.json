@@ -1,0 +1,22 @@
+{
+    "title": "Encapsulating",
+    "message":"Make this array the value of \"test\" of a JSON object",
+    "completedmessage":"",
+    "input":[
+        "Tuna",
+        "Vegetarian",
+        "Treats"
+    ],
+    "answer":". | {\"Foods\":.}",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

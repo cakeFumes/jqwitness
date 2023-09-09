@@ -1,0 +1,103 @@
+{
+    "title": "MultiContains",
+    "message":"Choose shops that contain \"Radish\" and \"Tomato\"",
+    "completedmessage":"",
+    "input":[
+        {
+            "Store":"Trader Joes",
+            "Items":[
+                "Apple",
+                "Banana",
+                "Orange",
+                "Fig",
+                "Green Beans",
+                "Hot Pepper",
+                "Papaya",
+                "Quince",
+                "Radish",
+                "Spinach",
+                "Tomato"
+            ],
+            "Payment":[
+                "Cash",
+                "Credit",
+                "ePay"
+            ]
+        },
+        {
+            "Store":"Target",
+            "Items":[
+                "Apple",
+                "Banana",
+                "Orange"
+            ]
+        },
+        {
+            "Store":"Tsukiji Imports",
+            "Items":[
+                "Fig",
+                "Imbe",
+                "Jackfruit",
+                "Kiwi",
+                "Lemon",
+                "Melon",
+                "Napa",
+                "Orange",
+                "Radish",
+                "Ugni",
+                "Yuzu"
+            ],
+            "Payment":[
+                "Cash",
+                "Credit",
+                "ePay"
+            ]
+        },
+        {
+            "Store":"Costco",
+            "Items":[
+                "Apple",
+                "Banana",
+                "Cucumbers",
+                "Dragonfruit",
+                "Eggplant",
+                "Fig",
+                "Green Beans",
+                "Hot Pepper",
+                "Imbe",
+                "Jackfruit",
+                "Kiwi",
+                "Lemon",
+                "Melon",
+                "Napa",
+                "Orange",
+                "Papaya",
+                "Quince",
+                "Spinach",
+                "Tomato",
+                "Ugni",
+                "Vanilla",
+                "Watercress",
+                "Yuzu",
+                "Zucchini"
+            ],
+            "Payment":[
+                "Cash",
+                "Credit",
+                "ePay"
+            ]
+        }
+    ],
+    "answer":".contains",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

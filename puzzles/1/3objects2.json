@@ -1,0 +1,30 @@
+{
+    "title": "Choosing Deeper",
+    "message":"Select the name of the dog only.",
+    "input":{
+        "MyDog": {
+            "name": "Spot",
+            "breed": "Dalmation",
+            "ID": 1
+        },
+        "MyCat": {
+            "name": "Kat",
+            "breed": "Calico",
+            "ID": 2
+        }
+    },
+    "answer":".MyDog.name",
+    "hints":[
+        {
+            "ID":1,
+            "text":"The answer is .name"
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{6,}",
+            "failmsg":"Too many characters!"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "title": "Comma In Array",
+    "message":"In Arrays, the Comma can be used to select multiple items on a list. Choose the second and third entries.",
+    "completedmessage":"",
+    "input":[
+        "Tuna",
+        "Vegetarian",
+        "Treats"
+    ],
+    "answer":".[1,2]",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[
+        {
+            "display": "Use as few letters as possible",
+            "failcondition":".{6,}",
+            "failmsg":"Too many characters!"
+        }
+    ]
+}

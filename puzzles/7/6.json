@@ -1,0 +1,103 @@
+{
+    "title": "Flip",
+    "message":"adsf",
+    "completedmessage":"",
+    "input":[
+        {
+            "Store":"Trader Joes",
+            "Items":[
+                "Apple",
+                "Banana",
+                "Orange",
+                "Fig",
+                "Green Beans",
+                "Hot Pepper",
+                "Papaya",
+                "Quince",
+                "Radish",
+                "Spinach",
+                "Tomato"
+            ],
+            "Payment":[
+                "Cash",
+                "Credit",
+                "ePay"
+            ]
+        },
+        {
+            "Store":"Target",
+            "Items":[
+                "Apple",
+                "Banana",
+                "Orange"
+            ]
+        },
+        {
+            "Store":"Tsukiji Imports",
+            "Items":[
+                "Fig",
+                "Imbe",
+                "Jackfruit",
+                "Kiwi",
+                "Lemon",
+                "Melon",
+                "Napa",
+                "Orange",
+                "Ugni",
+                "Yuzu"
+            ],
+            "Payment":[
+                "Cash",
+                "Credit",
+                "ePay"
+            ]
+        },
+        {
+            "Store":"Costco",
+            "Items":[
+                "Apple",
+                "Banana",
+                "Cucumbers",
+                "Dragonfruit",
+                "Eggplant",
+                "Fig",
+                "Green Beans",
+                "Hot Pepper",
+                "Imbe",
+                "Jackfruit",
+                "Kiwi",
+                "Lemon",
+                "Melon",
+                "Napa",
+                "Orange",
+                "Papaya",
+                "Quince",
+                "Radish",
+                "Spinach",
+                "Tomato",
+                "Ugni",
+                "Vanilla",
+                "Watercress",
+                "Yuzu",
+                "Zucchini"
+            ],
+            "Payment":[
+                "Cash",
+                "Credit",
+                "ePay"
+            ]
+        }
+    ],
+    "answer":"map(.Store as $store | {$store:del(.Store)}) | add",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

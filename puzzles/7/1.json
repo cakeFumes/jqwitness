@@ -1,0 +1,25 @@
+{
+    "title": "key",
+    "message":"keys",
+    "completedmessage":"",
+    "input":{
+        "a": {
+            "b": 1
+        },
+        "c": {
+            "d": 2
+        }
+    },
+    "answer":"keys",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}

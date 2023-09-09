@@ -1,0 +1,32 @@
+{
+    "title": "Contains",
+    "message":"Does Trader Joes contain \"Radish\"?",
+    "completedmessage":"",
+    "input":{
+        "Trader Joes":[
+            "Apple",
+            "Banana",
+            "Orange",
+            "Fig",
+            "Green Beans",
+            "Hot Pepper",
+            "Papaya",
+            "Quince",
+            "Radish",
+            "Spinach",
+            "Tomato"
+        ]
+    },
+    "answer":"contains(\"Radish\")",
+    "hints":[
+        {
+            "ID":1,
+            "text":"Welcome to the hint system!"
+        },
+        {
+            "ID":2,
+            "text":"Try \".\""
+        }
+    ],
+    "restrictions":[]
+}
